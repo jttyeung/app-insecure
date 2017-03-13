@@ -1,4 +1,3 @@
-env/
-.pyc
-.sh
-secrets
+env/*
+*.pyc
+*.sh
