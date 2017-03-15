@@ -3,10 +3,12 @@
 
 {% block body %}
 
-Login<br>
+<h2>Instructions: Get to the next page</h2><br>
+
+<h4>Login</h4>
 <form action="/levelonejk" method="GET">
-<label for="username">Username: </label><input type="text" name="username"><br>
-<label for="password">Password: </label><input type="password" name="password"><br>
+<label for="username">Username:</label> <input type="text" name="username" required="true"><br>
+<label for="password">Password:</label> <input type="password" name="password" required="true"><br>
 <input type="submit" name="submit">
 </form>
 

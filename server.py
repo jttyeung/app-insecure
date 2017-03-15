@@ -44,6 +44,16 @@ def level_one_jk():
     return render_template('level1.html', username=username, password=password)
 
 
+@app.route('/leveltwo')
+def level_two():
+    """ Brings user to the second level of the game. """
+
+
+    return render_template('level1.html', username=username, password=password)
+
+
+
+
 
 if __name__ == "__main__":
     app.debug = False

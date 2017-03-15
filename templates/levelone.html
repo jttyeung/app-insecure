@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 
+{% block body %}
 
-Login
-Username:
-Password:
+<h1>Looks like all you needed there was a bit of intuition to find the next page.</h1>
+
+Login<br>
+<form action="/levelonejk" method="POST">
+<label for="username">Username: </label><input type="text" name="username"><br>
+<label for="password">Password: </label><input type="password" name="password"><br>
+<input type="submit" name="submit">
+</form>
+
+{% endblock %}
