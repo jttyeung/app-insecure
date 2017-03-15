@@ -1,6 +1,6 @@
 """ App Insecure Server """
 
-from flask import Flask, render_template, redirect, flash, request, jsonify, json
+from flask import Flask, render_template, redirect, request
 from flask_debugtoolbar import DebugToolbarExtension
 
 import jinja2
@@ -24,16 +24,34 @@ def homepage():
 
 
 @app.route('/levelzero')
-def levelzero():
-    """ Brings user to the homepage. """
+def level_zero():
+    """ Brings user to the first level of the game. """
     return render_template('levelzero.html')
+
+
+@app.route('/levelone')
+def level_one():
+    """ Brings user to the first level of the game. """
+    return render_template('levelone.html')
+
+
+@app.route('/levelonejk')
+def level_one_jk():
+    """ Brings user to the fake first level of the game. """
+    username = request.args.get('username')
+    password = request.args.get('password')
+
+    return render_template('level1.html', username=username, password=password)
 
 
 
 if __name__ == "__main__":
-    app.debug = True
+    app.debug = False
 
     # Use the DebugToolbar
     DebugToolbarExtension(app)
 
-    app.run(host="0.0.0.0", port=4000)
+    # Connect DB to Flask before running app
+    # connect_to_db(app)
+
+    app.run(host="0.0.0.0", port=5000)
