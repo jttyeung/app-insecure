@@ -9,9 +9,17 @@
 
 <p>What did I do wrong?</p>
 
-<p><button class="btn btn-default">Show Answer</p>
-<div class="reveal-hint" hidden>
-
+<p><button class="btn btn-default">Show Answer</button></p>
+<div class="reveal-hint">
+<h4>There are a few things wrong with the implementation of the last page:</h4><br>
+  <ol>
+    <li>Any secure login implementation should never use a GET request. Why?</li>
+      <ul>
+        <li>GET requests can be bookmarked and cached by the browser; you don't want users to accidentally save their credentials where they shouldn't be or accidentally share a link with their information.</li>
+        <li>GET requests show form information in the query string shown in the resulting URL. Anyone looking over your shoulder will be able to clearly see your credentials in the URL bar while browsing the site.</li>
+      </ul>
+    <li></li>
+  </ol>
 </div>
 
 
